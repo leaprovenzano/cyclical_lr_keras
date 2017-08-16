@@ -43,7 +43,7 @@ class CyclicLR(callbacks.Callback):
         return self.min_lr + (self.max_lr - self.min_lr) * np.maximum(0, (1 - x)) * (1 / (decay**(cycle - 1)))
 
     def triangular2(self):
-        return self.triangular(iter_, decay=2)
+        return self.triangular(decay=2)
 
     available_funcs = {'triangular': triangular,
                        'triangular2': triangular2}
